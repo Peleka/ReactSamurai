@@ -1,0 +1,14 @@
+@charset "utf-8";
+.star::before {
+    display: block;
+    content: '\2606';
+}
+
+.starBold::before {
+    content: '\2605';
+    color: gold;
+}
+
+.wrapper {
+    display: flex;
+}
