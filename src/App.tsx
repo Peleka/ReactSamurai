@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
 import './App.css';
-import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRaiting} from "./components/UncontrolledRaiting/UncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import {Raiting, RaitingValueType} from "./Raiting/Rating";
-import Accordion from "./Accordion/Accordion";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
+import {Accordion} from "./components/Accordion/Accordion";
 import OnOff from "./components/OnOff/OnOff";
 
 
 function App() {
-    let [raitingValue, setRaitingValue] = useState<RaitingValueType>(0)
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     const [switchOn, setSwitchOn] = useState(true)
 
     return (
         <div>
             <OnOff on={switchOn} onChange={setSwitchOn}/>
-            <Raiting value={raitingValue} onClick={setRaitingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion titleValue={"Control"}
                        onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}
                        collapsed={accordionCollapsed}
@@ -25,7 +25,7 @@ function App() {
             {/*<PageTitle title={'This is APP component'}/>*/}
             {/*<PageTitle title={'My friends'}/>*/}
 
-            {/*<UncontrolledAccordion titleValue={'Menu'} />*/}
+            <UncontrolledAccordion titleValue={'Menu'} />
             {/*Article 2*/}
             <UncontrolledRaiting />
 

@@ -1,14 +1,14 @@
 import React from "react";
-import s from './Raiting.module.css'
+import s from './Rating.module.css'
 
-export type RaitingValueType = 0 | 1 | 2 | 3 | 4 | 5;
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5;
 
-type RaitingPropsType ={
-    value: RaitingValueType
-    onClick: (value: RaitingValueType) => void
+type RatingPropsType ={
+    value: RatingValueType
+    onClick: (value: RatingValueType) => void
 }
 
-export function Raiting(props: RaitingPropsType) {
+export function Rating(props: RatingPropsType) {
 
         return (
             <div className={s.wrapper}>
@@ -22,9 +22,9 @@ export function Raiting(props: RaitingPropsType) {
     }
 
 type StarPropsType = {
-    value: RaitingValueType
+    value: RatingValueType
     selected: boolean
-    onClick:  (value: RaitingValueType) => void
+    onClick:  (value: RatingValueType) => void
 }
 
 function Star(props: StarPropsType) {
