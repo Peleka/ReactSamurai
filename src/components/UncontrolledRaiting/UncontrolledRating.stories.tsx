@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
-import { action } from '@storybook/addon-actions';
-import {UncontrolledRaiting} from "./UncontrolledRating";
+import React from 'react';
+import { UncontrolledRating} from "./UncontrolledRating";
 
 
 
-export default {
-    title: 'UncontrolledRaiting',
-    component: UncontrolledRaiting,
+export default { //экспортируем название какую компоненту тестируем
+    title: 'UncontrolledRating ',
+    component: UncontrolledRating,
 };
-
-const callback = action('accordion mode change event fired')
-
-export const CollapsedMode = () => <UncontrolledRaiting/>
-
-// export const ModeChanging = () => {
-//     const[value, setValue] = useState<boolean>(false)
-//     return <UncontrolledAccordion titleValue={'title'}/>
-// }
+//экспортируем отдельные истории
+export const EmptyRating = () => <UncontrolledRating defaultValue={0} />;
+export const Rating1 = () => <UncontrolledRating defaultValue={1} />;
+export const Rating2 = () => <UncontrolledRating defaultValue={2} />;
+export const Rating3 = () => <UncontrolledRating defaultValue={3} />;
+export const Rating4 = () => <UncontrolledRating defaultValue={4} />;
+export const Rating5 = () => <UncontrolledRating defaultValue={5} />;

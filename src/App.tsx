@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {UncontrolledRaiting} from "./components/UncontrolledRaiting/UncontrolledRating";
+import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
@@ -27,7 +27,7 @@ function App() {
 
             <UncontrolledAccordion titleValue={'Menu'} />
             {/*Article 2*/}
-            <UncontrolledRaiting />
+            <UncontrolledRating />
 
         </div>
     );

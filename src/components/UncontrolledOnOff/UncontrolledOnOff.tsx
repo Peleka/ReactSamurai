@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import s from './UncontrolledOnOff.module.css'
 
-function UncontrolledOnOff() {
-    const [on, setOn] = useState(false)
+type PropsType = {
+    defaultOn?: boolean
+    defaultOff?: boolean
+}
+
+function UncontrolledOnOff(props:PropsType ) {
+    const [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     let classNameOn;
     let classNameOff = s.basic

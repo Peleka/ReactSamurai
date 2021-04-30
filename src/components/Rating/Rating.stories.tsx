@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
-import { action } from '@storybook/addon-actions'
 import {Rating, RatingValueType} from "./Rating";
 
 
 
-export default {
+export default { //экспортируем название какую компоненту тестируем
     title: 'Rating ',
     component: Rating,
 };
-
+//экспортируем отдельные истории
 export const EmptyRating = () => <Rating value={0} onClick={x => x}/>
 export const Rating1 = () => <Rating value={1} onClick={x => x}/>
 export const Rating2 = () => <Rating value={2} onClick={x => x}/>

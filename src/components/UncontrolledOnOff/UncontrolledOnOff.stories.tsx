@@ -9,11 +9,8 @@ export default {
     component: UncontrolledOnOff,
 };
 
-const callback = action('accordion mode change event fired')
+const callback = action('on or off clicked')
 
-export const CollapsedMode = () => <UncontrolledOnOff/>
-
-// export const ModeChanging = () => {
-//     const[value, setValue] = useState<boolean>(false)
-//     return <UncontrolledAccordion titleValue={'title'}/>
-// }
+export const OnMode = () => <UncontrolledOnOff defaultOn={true}/>
+export const OffMode = () => <UncontrolledOnOff defaultOff={false}/>
+export const BugMode = () => <div>Unsync when change defaultValue when already rendered</div>

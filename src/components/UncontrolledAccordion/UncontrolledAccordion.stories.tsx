@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { action } from '@storybook/addon-actions';
+import {action} from '@storybook/addon-actions';
 import {UncontrolledAccordion} from "./UncontrolledAccordion";
-
 
 
 export default {
@@ -11,9 +10,4 @@ export default {
 
 const callback = action('accordion mode change event fired')
 
-export const CollapsedMode = () => <UncontrolledAccordion titleValue={'title'}/>
-
-// export const ModeChanging = () => {
-//     const[value, setValue] = useState<boolean>(false)
-//     return <UncontrolledAccordion titleValue={'title'}/>
-// }
+export const ModeChanging = () => <UncontrolledAccordion titleValue={'title'}/>

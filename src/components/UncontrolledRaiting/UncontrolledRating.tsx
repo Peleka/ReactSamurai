@@ -1,14 +1,12 @@
 import React, {useState} from "react";
 import s from './UncontrolledRaiting.module.css'
 
-type RaitingValueType = {
-    value: 0 | 1 | 2 | 3 | 4 | 5
-}
-type RaitingPropsType ={
+export type RatingPropsType = {
+    defaultValue?: 0 | 1 | 2 | 3 | 4 | 5
 }
 
-export function UncontrolledRaiting(props: RaitingPropsType) {
-    const [value, setValue] = useState(0)
+export function UncontrolledRating(props: RatingPropsType) {
+    const [value, setValue] = useState(props.defaultValue ? props.defaultValue : 0)
 
         return (
             <div className={s.wrapper}>

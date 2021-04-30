@@ -12,7 +12,7 @@ export default {
 const callback = action('accordion mode change event fired')
 
 export const CollapsedMode = () => <Accordion titleValue={'Wish'} onChange={callback} collapsed={true}/>
-export const UncollapsedMode = () => <Accordion titleValue={'Users'} onChange={callback} collapsed={false}/>
+export const UnCollapsedMode = () => <Accordion titleValue={'Users'} onChange={callback} collapsed={false}/>
 
 export const ModeChanging = () => {
     const[value, setValue] = useState<boolean>(false)
