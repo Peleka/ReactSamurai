@@ -13,7 +13,8 @@ const onClickCallback = action('some item was clicked')
 
 export const CollapsedMode = () => <Accordion titleValue={'Wish'}
                                               onChange={callback}
-                                              collapsed={true} items={[]}
+                                              collapsed={true}
+                                              items={[]}
                                               onClick={callback}
 />
 export const UnCollapsedMode = () => <Accordion onClick={onClickCallback}
@@ -32,6 +33,6 @@ export const ModeChanging: Story<AccordionPropsType> = (args) => {
                       onChange={() => setValue(!value)}
                       collapsed={value}
                       items={[{title: "Ann", value: 1}, {title: "Dima", value: 2}, {title: "Elen", value: 3}]}
-                      onClick={onClickCallback}
+                      onClick={(value) => alert(value)}
     />
 }
