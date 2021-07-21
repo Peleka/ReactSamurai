@@ -101,6 +101,21 @@ export const KeyboardEventExample = () => {
 
     return <>
         Text: {text}
-
     </>
+}
+
+export const SetTimeoutExample = () => {
+    const [text, setText] = useState('')
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            console.log("TIMEOUT")
+            setText('3 seconds passed')
+        }, 3000)
+        return () => {
+            clearTimeout(timeoutId)
+        }
+    }, [text])
+
+    return <>{text}</>
 }
